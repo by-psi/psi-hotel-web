@@ -1,0 +1,706 @@
+object F_aptos: TF_aptos
+  Left = 0
+  Top = 0
+  Width = 512
+  Height = 603
+  RenderInvisibleControls = True
+  AllowPageAccess = True
+  ConnectionMode = cmAny
+  OnShow = IWAppFormShow
+  Background.Fixed = False
+  LayoutMgr = template_aptos
+  HandleTabs = False
+  LeftToRight = True
+  LockUntilLoaded = True
+  LockOnSubmit = True
+  ShowHint = True
+  XPTheme = True
+  DesignLeft = 2
+  DesignTop = 2
+  object ed_apto: TIWEdit
+    Left = 24
+    Top = 73
+    Width = 121
+    Height = 21
+    Css = 'form-control'
+    StyleRenderOptions.RenderBorder = False
+    Font.Color = clNone
+    Font.Size = 10
+    Font.Style = []
+    FriendlyName = 'ed_apto'
+    SubmitOnAsyncEvent = True
+    TabOrder = 2
+  end
+  object ed_id: TIWEdit
+    Left = 24
+    Top = 46
+    Width = 121
+    Height = 21
+    Css = 'form-control'
+    StyleRenderOptions.RenderBorder = False
+    Font.Color = clNone
+    Font.Size = 10
+    Font.Style = []
+    FriendlyName = 'ed_id'
+    SubmitOnAsyncEvent = True
+    TabOrder = 1
+  end
+  object ed_buscar: TIWEdit
+    Left = 24
+    Top = 19
+    Width = 121
+    Height = 21
+    OnHTMLTag = ed_buscarHTMLTag
+    Css = 'form-control'
+    StyleRenderOptions.RenderBorder = False
+    Font.Color = clNone
+    Font.Size = 10
+    Font.Style = []
+    FriendlyName = 'ed_buscar'
+    SubmitOnAsyncEvent = True
+    TabOrder = 0
+  end
+  object ed_descricao: TIWEdit
+    Left = 24
+    Top = 131
+    Width = 121
+    Height = 21
+    Css = 'form-control'
+    StyleRenderOptions.RenderBorder = False
+    Font.Color = clNone
+    Font.Size = 10
+    Font.Style = []
+    FriendlyName = 'ed_descricao'
+    SubmitOnAsyncEvent = True
+    TabOrder = 4
+  end
+  object link_home: TIWLink
+    Left = 370
+    Top = 84
+    Width = 113
+    Height = 17
+    Css = 'nav-link btn-magnify'
+    Alignment = taLeftJustify
+    Color = clNone
+    Font.Color = clNone
+    Font.Size = 10
+    Font.Style = [fsUnderline]
+    HasTabOrder = True
+    DoSubmitValidation = False
+    FriendlyName = 'link_home'
+    OnClick = link_homeClick
+    TabOrder = 13
+    RawText = False
+    Caption = 'VOLTAR AO IN'#205'CIO'
+  end
+  object bt_incluir: TIWButton
+    Left = 168
+    Top = 50
+    Width = 67
+    Height = 25
+    Caption = 'INCLUIR'
+    Color = clBtnFace
+    Font.Color = clNone
+    Font.Size = 10
+    Font.Style = []
+    FriendlyName = 'bt_incluir'
+    TabOrder = 9
+    OnAsyncClick = bt_incluirAsyncClick
+  end
+  object bt_editar: TIWButton
+    Left = 240
+    Top = 50
+    Width = 59
+    Height = 25
+    Caption = 'EDITAR'
+    Color = clBtnFace
+    Font.Color = clNone
+    Font.Size = 10
+    Font.Style = []
+    FriendlyName = 'bt_editar'
+    TabOrder = 10
+    OnAsyncClick = bt_editarAsyncClick
+  end
+  object bt_excluir: TIWButton
+    Left = 305
+    Top = 50
+    Width = 61
+    Height = 25
+    Caption = 'EXCLUIR'
+    Confirmation = 'Deseja excluir este item?'
+    Color = clBtnFace
+    Font.Color = clNone
+    Font.Size = 10
+    Font.Style = []
+    FriendlyName = 'bt_excluir'
+    TabOrder = 11
+    OnClick = bt_excluirClick
+  end
+  object bt_ok: TIWButton
+    Left = 372
+    Top = 50
+    Width = 27
+    Height = 25
+    Css = 'btn btn-success'
+    Caption = 'OK'
+    Color = clBtnFace
+    Font.Color = clNone
+    Font.Size = 10
+    Font.Style = []
+    FriendlyName = 'bt_ok'
+    TabOrder = 12
+    OnAsyncClick = bt_okAsyncClick
+  end
+  object bt_cancelar: TIWButton
+    Left = 405
+    Top = 50
+    Width = 75
+    Height = 25
+    Css = 'btn btn-danger'
+    Caption = 'CANCELAR'
+    Color = clBtnFace
+    Font.Color = clNone
+    Font.Size = 10
+    Font.Style = []
+    FriendlyName = 'bt_cancelar'
+    TabOrder = 14
+    OnClick = bt_cancelarClick
+  end
+  object bt_buscar: TIWButton
+    Left = 168
+    Top = 19
+    Width = 67
+    Height = 25
+    Css = 'btn btn-primary'
+    Caption = 'BUSCAR'
+    Color = clBtnFace
+    Font.Color = clNone
+    Font.Size = 10
+    Font.Style = []
+    FriendlyName = 'bt_buscar'
+    TabOrder = 7
+    OnClick = bt_buscarClick
+  end
+  object bt_imprimir: TIWButton
+    Left = 241
+    Top = 19
+    Width = 26
+    Height = 25
+    Css = 'btn btn-info'
+    Caption = 'P'
+    Color = clBtnFace
+    Font.Color = clNone
+    Font.Size = 10
+    Font.Style = []
+    FriendlyName = 'bt_imprimir'
+    TabOrder = 8
+  end
+  object ed_diaria: TIWEdit
+    Left = 24
+    Top = 158
+    Width = 121
+    Height = 21
+    Css = 'form-control'
+    StyleRenderOptions.RenderBorder = False
+    Font.Color = clNone
+    Font.Size = 10
+    Font.Style = []
+    FriendlyName = 'ed_apto'
+    SubmitOnAsyncEvent = True
+    TabOrder = 5
+  end
+  object ed_situacao: TIWComboBox
+    Left = 24
+    Top = 185
+    Width = 121
+    Height = 25
+    Css = 'form-control'
+    StyleRenderOptions.RenderBorder = False
+    Font.Color = clNone
+    Font.Size = 10
+    Font.Style = []
+    OnAsyncEnter = ed_situacaoAsyncEnter
+    TabOrder = 6
+    ItemIndex = -1
+    Items.Strings = (
+      'HORA'
+      'PERNOITE'
+      'DI'#193'RIA'
+      'PROMO 2H'
+      'PROMO 3H'
+      '24H'
+      'MANUTENCAO'
+      'LIVRE')
+    FriendlyName = 'ed_dc'
+    NoSelectionText = '-- No Selection --'
+  end
+  object m_painel: TIWLink
+    Left = 168
+    Top = 81
+    Width = 113
+    Height = 17
+    Alignment = taLeftJustify
+    Color = clNone
+    Font.Color = clNone
+    Font.Size = 10
+    Font.Style = [fsUnderline]
+    HasTabOrder = True
+    DoSubmitValidation = False
+    FriendlyName = 'm_painel'
+    OnClick = m_painelClick
+    TabOrder = 15
+    RawText = False
+    Caption = 'PAINEL'
+  end
+  object m_aptos: TIWLink
+    Left = 168
+    Top = 105
+    Width = 113
+    Height = 17
+    Alignment = taLeftJustify
+    Color = clNone
+    Font.Color = clNone
+    Font.Size = 10
+    Font.Style = [fsUnderline]
+    HasTabOrder = True
+    DoSubmitValidation = False
+    FriendlyName = 'm_aptos'
+    OnClick = m_apartamentosClick
+    TabOrder = 16
+    RawText = False
+    Caption = 'APARTAMENTOS'
+  end
+  object m_feriados: TIWLink
+    Left = 168
+    Top = 151
+    Width = 113
+    Height = 17
+    Alignment = taLeftJustify
+    Color = clNone
+    Font.Color = clNone
+    Font.Size = 10
+    Font.Style = [fsUnderline]
+    HasTabOrder = True
+    DoSubmitValidation = False
+    FriendlyName = 'm_feriados'
+    OnClick = m_feriadosClick
+    TabOrder = 17
+    RawText = False
+    Caption = 'FERIADOS'
+  end
+  object m_tabeladeprecos: TIWLink
+    Left = 168
+    Top = 128
+    Width = 113
+    Height = 17
+    Alignment = taLeftJustify
+    Color = clNone
+    Font.Color = clNone
+    Font.Size = 10
+    Font.Style = [fsUnderline]
+    HasTabOrder = True
+    DoSubmitValidation = False
+    FriendlyName = 'm_lavanderia'
+    OnClick = m_tabeladeprecosClick
+    TabOrder = 18
+    RawText = False
+    Caption = 'TABELA DE PRE'#199'OS'
+  end
+  object m_vendas: TIWLink
+    Left = 168
+    Top = 174
+    Width = 113
+    Height = 17
+    Alignment = taLeftJustify
+    Color = clNone
+    Font.Color = clNone
+    Font.Size = 10
+    Font.Style = [fsUnderline]
+    HasTabOrder = True
+    DoSubmitValidation = False
+    FriendlyName = 'm_vendas'
+    OnClick = m_vendasClick
+    TabOrder = 19
+    RawText = False
+    Caption = 'VENDAS'
+  end
+  object m_estoque: TIWLink
+    Left = 168
+    Top = 197
+    Width = 113
+    Height = 17
+    Alignment = taLeftJustify
+    Color = clNone
+    Font.Color = clNone
+    Font.Size = 10
+    Font.Style = [fsUnderline]
+    HasTabOrder = True
+    DoSubmitValidation = False
+    FriendlyName = 'm_estoque'
+    OnClick = m_estoqueClick
+    TabOrder = 20
+    RawText = False
+    Caption = 'ESTOQUE'
+  end
+  object m_produtos: TIWLink
+    Left = 205
+    Top = 220
+    Width = 98
+    Height = 17
+    Alignment = taLeftJustify
+    Color = clNone
+    Font.Color = clNone
+    Font.Size = 10
+    Font.Style = [fsUnderline]
+    HasTabOrder = True
+    DoSubmitValidation = False
+    FriendlyName = 'm_produtos'
+    OnClick = m_produtosClick
+    TabOrder = 21
+    RawText = False
+    Caption = 'PRODUTOS'
+  end
+  object m_fornecedores: TIWLink
+    Left = 205
+    Top = 243
+    Width = 98
+    Height = 17
+    Alignment = taLeftJustify
+    Color = clNone
+    Font.Color = clNone
+    Font.Size = 10
+    Font.Style = [fsUnderline]
+    HasTabOrder = True
+    DoSubmitValidation = False
+    FriendlyName = 'm_fornecedores'
+    OnClick = m_fornecedoresClick
+    TabOrder = 22
+    RawText = False
+    Caption = 'FORNECEDORES'
+  end
+  object m_compras: TIWLink
+    Left = 205
+    Top = 266
+    Width = 98
+    Height = 17
+    Alignment = taLeftJustify
+    Color = clNone
+    Font.Color = clNone
+    Font.Size = 10
+    Font.Style = [fsUnderline]
+    HasTabOrder = True
+    DoSubmitValidation = False
+    FriendlyName = 'm_compras'
+    OnClick = m_comprasClick
+    TabOrder = 23
+    RawText = False
+    Caption = 'COMPRAS'
+  end
+  object m_financeiro: TIWLink
+    Left = 168
+    Top = 289
+    Width = 113
+    Height = 17
+    Alignment = taLeftJustify
+    Color = clNone
+    Font.Color = clNone
+    Font.Size = 10
+    Font.Style = [fsUnderline]
+    HasTabOrder = True
+    DoSubmitValidation = False
+    FriendlyName = 'm_financeiro'
+    OnClick = m_financeiroClick
+    TabOrder = 24
+    RawText = False
+    Caption = 'FINANCEIRO'
+  end
+  object m_planodecontas: TIWLink
+    Left = 205
+    Top = 312
+    Width = 148
+    Height = 17
+    Alignment = taLeftJustify
+    Color = clNone
+    Font.Color = clNone
+    Font.Size = 10
+    Font.Style = [fsUnderline]
+    HasTabOrder = True
+    DoSubmitValidation = False
+    FriendlyName = 'm_vendas'
+    OnClick = m_planodecontasClick
+    TabOrder = 25
+    RawText = False
+    Caption = 'PLANO DE CONTAS'
+  end
+  object m_contasapagarreceber: TIWLink
+    Left = 205
+    Top = 335
+    Width = 148
+    Height = 17
+    Alignment = taLeftJustify
+    Color = clNone
+    Font.Color = clNone
+    Font.Size = 10
+    Font.Style = [fsUnderline]
+    HasTabOrder = True
+    DoSubmitValidation = False
+    FriendlyName = 'm_vendas'
+    OnClick = m_contasapagarreceberClick
+    TabOrder = 26
+    RawText = False
+    Caption = 'CTAS A PAGAR/RECEBER'
+  end
+  object m_lancamentos: TIWLink
+    Left = 205
+    Top = 358
+    Width = 148
+    Height = 17
+    Alignment = taLeftJustify
+    Color = clNone
+    Font.Color = clNone
+    Font.Size = 10
+    Font.Style = [fsUnderline]
+    HasTabOrder = True
+    DoSubmitValidation = False
+    FriendlyName = 'm_vendas'
+    OnClick = m_lancamentosClick
+    TabOrder = 27
+    RawText = False
+    Caption = 'LAN'#199'AMENTOS C/C'
+  end
+  object m_relatorios: TIWLink
+    Left = 168
+    Top = 381
+    Width = 113
+    Height = 17
+    Alignment = taLeftJustify
+    Color = clNone
+    Font.Color = clNone
+    Font.Size = 10
+    Font.Style = [fsUnderline]
+    HasTabOrder = True
+    DoSubmitValidation = False
+    FriendlyName = 'm_lavanderia'
+    OnClick = m_relatoriosClick
+    TabOrder = 28
+    RawText = False
+    Caption = 'RELAT'#211'RIOS'
+  end
+  object m_relatoriodeestoque: TIWLink
+    Left = 205
+    Top = 408
+    Width = 98
+    Height = 17
+    Alignment = taLeftJustify
+    Color = clNone
+    Font.Color = clNone
+    Font.Size = 10
+    Font.Style = [fsUnderline]
+    HasTabOrder = True
+    DoSubmitValidation = False
+    FriendlyName = 'm_vendas'
+    OnClick = m_relatoriodeestoqueClick
+    TabOrder = 29
+    RawText = False
+    Caption = 'RE - ESTOQUE'
+  end
+  object m_relatoriodevendas: TIWLink
+    Left = 205
+    Top = 431
+    Width = 98
+    Height = 17
+    Alignment = taLeftJustify
+    Color = clNone
+    Font.Color = clNone
+    Font.Size = 10
+    Font.Style = [fsUnderline]
+    HasTabOrder = True
+    DoSubmitValidation = False
+    FriendlyName = 'm_vendas'
+    OnClick = m_relatoriodevendasClick
+    TabOrder = 30
+    RawText = False
+    Caption = 'RV - VENDAS'
+  end
+  object m_relatoriofinanceiro: TIWLink
+    Left = 205
+    Top = 454
+    Width = 98
+    Height = 17
+    Alignment = taLeftJustify
+    Color = clNone
+    Font.Color = clNone
+    Font.Size = 10
+    Font.Style = [fsUnderline]
+    HasTabOrder = True
+    DoSubmitValidation = False
+    FriendlyName = 'm_vendas'
+    OnClick = m_relatoriofinanceiroClick
+    TabOrder = 31
+    RawText = False
+    Caption = 'RF - FINANCEIRO'
+  end
+  object m_lavanderia: TIWLink
+    Left = 168
+    Top = 477
+    Width = 217
+    Height = 17
+    Alignment = taLeftJustify
+    Color = clNone
+    Font.Color = clNone
+    Font.Size = 10
+    Font.Style = [fsUnderline]
+    HasTabOrder = True
+    DoSubmitValidation = False
+    FriendlyName = 'm_lavanderia'
+    OnClick = m_lavanderiaClick
+    TabOrder = 32
+    RawText = False
+    Caption = 'LAVANDERIA (COLETAS/ENTREGAS)'
+  end
+  object m_usuarios: TIWLink
+    Left = 168
+    Top = 500
+    Width = 113
+    Height = 17
+    Alignment = taLeftJustify
+    Color = clNone
+    Font.Color = clNone
+    Font.Size = 10
+    Font.Style = [fsUnderline]
+    HasTabOrder = True
+    DoSubmitValidation = False
+    FriendlyName = 'm_usuarios'
+    OnClick = m_usuariosClick
+    TabOrder = 33
+    RawText = False
+    Caption = 'USU'#193'RIOS'
+  end
+  object m_suportetecnico: TIWLink
+    Left = 168
+    Top = 523
+    Width = 113
+    Height = 17
+    Alignment = taLeftJustify
+    Color = clNone
+    Font.Color = clNone
+    Font.Size = 10
+    Font.Style = [fsUnderline]
+    HasTabOrder = True
+    DoSubmitValidation = False
+    FriendlyName = 'm_usuarios'
+    OnClick = m_suportetecnicoClick
+    TabOrder = 34
+    RawText = False
+    Caption = 'SUPORTE T'#201'CNICO'
+  end
+  object m_configuracoes: TIWLink
+    Left = 168
+    Top = 546
+    Width = 113
+    Height = 17
+    Alignment = taLeftJustify
+    Color = clNone
+    Font.Color = clNone
+    Font.Size = 10
+    Font.Style = [fsUnderline]
+    HasTabOrder = True
+    DoSubmitValidation = False
+    FriendlyName = 'm_financeiro'
+    OnClick = m_configuracoesClick
+    TabOrder = 35
+    RawText = False
+    Caption = 'CONFIGURA'#199#213'ES'
+  end
+  object m_sair: TIWLink
+    Left = 168
+    Top = 571
+    Width = 113
+    Height = 17
+    Alignment = taLeftJustify
+    Color = clNone
+    Font.Color = clNone
+    Font.Size = 10
+    Font.Style = [fsUnderline]
+    HasTabOrder = True
+    DoSubmitValidation = False
+    FriendlyName = 'm_sair'
+    OnClick = link_sairClick
+    TabOrder = 36
+    RawText = False
+    Caption = 'SAIR (LOGOUT)'
+  end
+  object link_usuario: TIWLink
+    Left = 370
+    Top = 107
+    Width = 73
+    Height = 17
+    Css = 'dropdown-item'
+    Alignment = taLeftJustify
+    Color = clNone
+    Font.Color = clNone
+    Font.Size = 10
+    Font.Style = [fsUnderline]
+    HasTabOrder = True
+    DoSubmitValidation = False
+    FriendlyName = 'link_usuario'
+    OnClick = link_usuarioClick
+    TabOrder = 37
+    RawText = False
+    Caption = 'USU'#193'RIO'
+  end
+  object link_sair: TIWLink
+    Left = 370
+    Top = 130
+    Width = 73
+    Height = 17
+    Css = 'dropdown-item'
+    Alignment = taLeftJustify
+    Color = clNone
+    Font.Color = clNone
+    Font.Size = 10
+    Font.Style = [fsUnderline]
+    HasTabOrder = True
+    DoSubmitValidation = False
+    FriendlyName = 'link_sair'
+    OnClick = link_sairClick
+    TabOrder = 38
+    RawText = False
+    Caption = 'SAIR'
+  end
+  object Label_1: TIWLabel
+    Left = 370
+    Top = 174
+    Width = 48
+    Height = 16
+    Font.Color = clNone
+    Font.Size = 10
+    Font.Style = []
+    HasTabOrder = False
+    FriendlyName = 'Label_1'
+    Caption = 'Label_1'
+  end
+  object ed_tipo: TIWComboBox
+    Left = 24
+    Top = 100
+    Width = 121
+    Height = 25
+    Css = 'form-control'
+    StyleRenderOptions.RenderBorder = False
+    Font.Color = clNone
+    Font.Size = 10
+    Font.Style = []
+    OnAsyncEnter = ed_tipoAsyncEnter
+    TabOrder = 3
+    ItemIndex = -1
+    FriendlyName = 'ed_tipo'
+    NoSelectionText = '-- No Selection --'
+  end
+  object template_aptos: TIWTemplateProcessorHTML
+    TagType = ttIntraWeb
+    OnUnknownTag = template_aptosUnknownTag
+    RenderStyles = False
+    Left = 48
+    Top = 227
+  end
+end
