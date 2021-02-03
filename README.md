@@ -1,4 +1,4 @@
-<img src="https://1.bp.blogspot.com/-zzlmDBIQre8/X6wL0Ov9o8I/AAAAAAAAJqU/D0FGInx4euUcok9EyRxCVmtNxTPDfg-xQCLcBGAsYHQ/w400-h250/Captura%2Bde%2Btela%2B2020-11-11%2B113817.jpg><br>
+<img src="psi-software.png" width="100"><br>
 PSI-HOTEL WEB v10.3
 Sistema para Hotelaria de Pequeno Porte (Hotéis, Motéis e Pousadas)
 
