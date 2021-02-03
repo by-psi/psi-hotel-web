@@ -1,7 +1,3 @@
-## wwwroot
-esta pasta contém arquivos e subpastas:<br>
-- assets (folhas de estilo css. scss, javascript, fonts, webfonts e imagens)
-- icons (icones .bmp e .png)
-- impressos (arquivos .PDF e .FR3)
-- produtos (imagens)
-e outros arquivos, etc.
+## PSI-HOTEL WEB v10.3
+Sistema para Hotelaria de Pequeno Porte (Hotéis, Motéis e Pousadas)
+by Ezequias Martins
