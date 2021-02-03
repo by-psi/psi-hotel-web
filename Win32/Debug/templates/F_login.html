@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<link rel="icon" type="image/png" href="psi-software.png">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<title>LOGIN | PSI-HOTEL WEB v10.3
+</title>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link href="style.css" rel="stylesheet" id="bootstrap-css">
+<script src="script.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>
+
+<body>
+<borl_whitespace><!------ Include the above in your HEAD tag ---------->
+<borl_whitespace>
+<!--
+ you can substitue the span of reauth email for a input with the email and
+ include the remember me checkbox
+ -->
+<div class="container">
+    <div class="card card-container">
+        <borl_whitespace>
+        <!-- <img class="profile-img-card" src="" alt="" /> -->
+        <img id="profile-img" class="profile-img-card" src="psi-software.png" />
+        <p id="profile-name" class="profile-name-card"></p>
+        <div class="panel">
+            <h2>PSI-HOTEL v10.3</h2>
+            <p>Por favor informe Usuário e Senha</p>
+            <borl_whitespace>
+            </borl_whitespace>
+        </div>
+        <form class="form-signin">
+            <borl_whitespace><!--input type="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus-->
+            <borl_whitespace><!--input type="password" id="inputPassword" class="form-control" placeholder="Senha" required-->
+            <span id="reauth-email" class="reauth-email"></span>{%ed_usuario%}             <span id="reauth-email" class="reauth-email"></span>{%ed_senha%}            <div id="remember" class="checkbox">
+                <label>
+                    <input type="checkbox" value="remember-me">Lembrar-me!
+                </label>
+            </div>{%BT_LOGIN%}        <!-- /form -->
+            <p><a href="#" class="forgot-password">Esqueceu sua senha?</a></p></borl_whitespace></borl_whitespace>
+        </form></borl_whitespace>
+    </div><!-- /card-container -->
+</div><!-- /container -->
+</borl_whitespace></borl_whitespace>
+</body>
+</html>
