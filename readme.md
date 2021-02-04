@@ -2,23 +2,23 @@
 ## PSI-HOTEL WEB v10.3
 Sistema para Hotelaria de Pequeno Porte (Hotéis, Motéis e Pousadas)
 <div row>
-  <div col class="sm-2">
-    <img src="Images/t1.png" class="responsive" width="200">
+  <div col>
+    <img src="Imagens/t1.png" class="responsive" width="200">
   </div>
-  <div col class="sm-2">
-    <img src="Images/t2.png" class="responsive" width="200">
+  <div col>
+    <img src="Imagens/t2.png" class="responsive" width="200">
   </div>
-  <div col class="sm-2">
-    <img src="Images/t3.png" class="responsive" width="200">
+  <div col>
+    <img src="Imagens/t3.png" class="responsive" width="200">
   </div>
-  <div col class="sm-2">
-    <img src="Images/t4.png" class="responsive" width="200">
+  <div col>
+    <img src="Imagens/t4.png" class="responsive" width="200">
   </div>
-  <div col class="sm-2">
-    <img src="Images/t5.png" class="responsive" width="200">
+  <div col>
+    <img src="Imagens/t5.png" class="responsive" width="200">
   </div>
-  <div col class="sm-2">
-    <img src="Images/t6.png" class="responsive" width="200">
+  <div col>
+    <img src="Imagens/t6.png" class="responsive" width="200">
   </div>
 </div>
 ## Descrição<br>
