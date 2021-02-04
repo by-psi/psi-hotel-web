@@ -1,7 +1,26 @@
 <img src="psi-software.png" width="100"><br>
 ## PSI-HOTEL WEB v10.3
 Sistema para Hotelaria de Pequeno Porte (Hotéis, Motéis e Pousadas)
-
+<div row>
+  <div col class="sm-2">
+    <img src="Images/t1.png" class="responsive" width="200">
+  </div>
+  <div col class="sm-2">
+    <img src="Images/t2.png" class="responsive" width="200">
+  </div>
+  <div col class="sm-2">
+    <img src="Images/t3.png" class="responsive" width="200">
+  </div>
+  <div col class="sm-2">
+    <img src="Images/t4.png" class="responsive" width="200">
+  </div>
+  <div col class="sm-2">
+    <img src="Images/t5.png" class="responsive" width="200">
+  </div>
+  <div col class="sm-2">
+    <img src="Images/t6.png" class="responsive" width="200">
+  </div>
+</div>
 ## Descrição<br>
 Projeto de Desenvolvimento Web c/ Delphi 10.3.3 Community Edition + MySQL usando componentes Intraweb, com integração c/ Bootstrap (HTML5/CSS), Javascript
 
