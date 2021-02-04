@@ -1,26 +1,18 @@
 <img src="psi-software.png" width="100"><br>
 ## PSI-HOTEL WEB v10.3
 Sistema para Hotelaria de Pequeno Porte (Hotéis, Motéis e Pousadas)
-<div row>
-  <div col>
-    <img src="Imagens/t1.png" class="responsive" width="200">
-  </div>
-  <div col>
-    <img src="Imagens/t2.png" class="responsive" width="200">
-  </div>
-  <div col>
-    <img src="Imagens/t3.png" class="responsive" width="200">
-  </div>
-  <div col>
-    <img src="Imagens/t4.png" class="responsive" width="200">
-  </div>
-  <div col>
-    <img src="Imagens/t5.png" class="responsive" width="200">
-  </div>
-  <div col>
-    <img src="Imagens/t6.png" class="responsive" width="200">
-  </div>
-</div>
+<table>
+  <tbody>
+    <tr>
+      <td><img src="Imagens/t1.png" class="responsive" width="200"></td>
+      <td><img src="Imagens/t2.png" class="responsive" width="200"></td>
+      <td><img src="Imagens/t3.png" class="responsive" width="200"></td>
+      <td><img src="Imagens/t4.png" class="responsive" width="200"></td>
+      <td><img src="Imagens/t5.png" class="responsive" width="200"></td>
+      <td><img src="Imagens/t6.png" class="responsive" width="200"></td>   
+    </tr>
+  </tbody>
+</table>
 ## Descrição<br>
 Projeto de Desenvolvimento Web c/ Delphi 10.3.3 Community Edition + MySQL usando componentes Intraweb, com integração c/ Bootstrap (HTML5/CSS), Javascript
 
