@@ -173,8 +173,9 @@ var
   USRFUNCTION: string;
   USRLEVEL: string;
 
-const //   '12345678901'
-  codigo = 'PSIHOTELBHZ';
+const
+  codigo = 'PSI-HOTEL';
+  local  = 'BHZ';
 
 implementation
 
@@ -186,8 +187,8 @@ procedure TF_session.IWUserSessionBaseCreate(Sender: TObject);
 begin
   try
     DateTimeToString(dt_atual, 'dd/mm/yyyy hh:nn:ss', Now);
-    PW := lowercase(copy(codigo,1,3)+'.'+copy(codigo,4,5)+'.'+copy(codigo,9,3)+'.'+copy(dt_atual,7,4));
-//  DriverLink_1.VendorHome := GetCurrentDir + '\wwwroot\libmysql.dll';
+    PW := lowercase(copy(codigo,1,3)+'.'+copy(codigo,5,5)+'.'+local+'.'+copy(dt_atual,7,4));
+//  DriverLink_1.VendorHome := 'wwwroot\libmysql.dll';
 
     FileName := ChangeFileExt(ParamStr(0), '.ini');
     ArqINI := TIniFile.Create(FileName);
@@ -196,7 +197,7 @@ begin
     begin
       ArqINI.WriteString('DB', 'type', '0');
       ArqINI.WriteString('DB', 'driver', 'MySQL');
-      ArqINI.WriteString('DB', 'server', '127.0.0.1');
+      ArqINI.WriteString('DB', 'server', '127.0.0.1'); // config. padrão (VertrigoServ)
       ArqINI.WriteString('DB', 'port', '3306');
       ArqINI.WriteString('DB', 'database', 'psi_hotelweb');
       ArqINI.WriteString('DB', 'user', 'root');
@@ -218,7 +219,7 @@ begin
     if config = '2' then
     begin
       FDriverID := 'MySQL';
-      FServer := 'localhost';
+      FServer := 'localhost'; // config. padrão (WampServer, Xampp)
       FPort := '3306';
       FDatabase := 'psi_hotelweb';
       FUser := 'root';
@@ -226,11 +227,11 @@ begin
     end else
     begin
       FDriverID := 'MySQL';
-      FServer := 'psi-software.com.br';
-      FPort := '9967';
-      FDatabase := 'psisoftw_hotel';
-      FUser := 'psisoftw_adm';
-      FPassword := PW;
+      FServer := 'mysql742.umbler.com'; // config. web (cloudserver: Umbler)
+      FPort := '41890';
+      FDatabase := 'psi_hotel';
+      FUser := 'psi_adm';
+      FPassword := pw;
     end;
 
     ArqINI.Free;

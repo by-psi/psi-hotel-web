@@ -849,7 +849,7 @@ object F_principal: TF_principal
     Font.Style = []
     FriendlyName = 'bt_ok'
     TabOrder = 48
-    OnClick = bt_confirmapedidoClick
+    OnAsyncClick = bt_confirmapedidoAsyncClick
   end
   object bt_cancelapedido: TIWButton
     Left = 539
@@ -892,6 +892,7 @@ object F_principal: TF_principal
     Font.Style = []
     FriendlyName = 'bt_cancelar'
     TabOrder = 51
+    OnClick = bt_cancelasaidaClick
   end
   object ed_data: TIWEdit
     Left = 494

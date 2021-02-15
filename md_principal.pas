@@ -121,7 +121,9 @@ type
 
     procedure link_usuarioClick(Sender: TObject);
     procedure link_sairClick(Sender: TObject);
-    procedure bt_confirmapedidoClick(Sender: TObject);
+    procedure bt_confirmapedidoAsyncClick(Sender: TObject;
+      EventParams: TStringList);
+    procedure bt_cancelasaidaClick(Sender: TObject);
 
   public
 
@@ -479,7 +481,8 @@ begin
   WebApplication.CallBackResponse.AddJavaScriptToExecute('location.reload()');
 end;
 
-procedure TF_principal.bt_confirmapedidoClick(Sender: TObject);
+procedure TF_principal.bt_confirmapedidoAsyncClick(Sender: TObject;
+  EventParams: TStringList);
 begin
   totaliza_itens;
   ed_data.Text := DateToStr(Date);
@@ -509,6 +512,11 @@ end;
 procedure TF_principal.bt_cancelarentradaClick(Sender: TObject);
 begin
   WebApplication.CallBackResponse.AddJavaScriptToExecute('$(''#ABRIR_CONTA'').modal(''hide'');');
+end;
+
+procedure TF_principal.bt_cancelasaidaClick(Sender: TObject);
+begin
+  WebApplication.CallBackResponse.AddJavaScriptToExecute('$(''#LANCAR_PEDIDOS'').modal(''hide'');');
 end;
 
 procedure TF_principal.bt_saidaAsyncClick(Sender: TObject; EventParams: TStringList);

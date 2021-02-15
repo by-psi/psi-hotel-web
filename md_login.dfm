@@ -1,7 +1,7 @@
 object F_login: TF_login
   Left = 0
   Top = 0
-  Width = 172
+  Width = 112
   Height = 182
   RenderInvisibleControls = True
   AllowPageAccess = True
@@ -18,8 +18,8 @@ object F_login: TF_login
   DesignLeft = 2
   DesignTop = 2
   object bt_login: TIWButton
-    Left = 64
-    Top = 80
+    Left = 18
+    Top = 70
     Width = 75
     Height = 25
     Css = 'btn btn-lg btn-primary btn-block btn-signin'
@@ -35,7 +35,7 @@ object F_login: TF_login
   object ed_usuario: TIWEdit
     Left = 18
     Top = 16
-    Width = 121
+    Width = 75
     Height = 21
     Hint = 'Senha'
     OnHTMLTag = ed_usuarioHTMLTag
@@ -51,7 +51,7 @@ object F_login: TF_login
   object ed_senha: TIWEdit
     Left = 18
     Top = 43
-    Width = 121
+    Width = 75
     Height = 21
     Hint = 'Senha'
     OnHTMLTag = ed_senhaHTMLTag

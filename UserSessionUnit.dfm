@@ -397,7 +397,7 @@ object F_session: TF_session
     end
   end
   object DriverLink_1: TFDPhysMySQLDriverLink
-    VendorLib = 'C:\public_html\psi_hotel\Win32\Debug\wwwroot\libmysql.dll'
+    VendorLib = 'wwwroot\libmysql.dll'
     Left = 640
     Top = 80
   end
@@ -405,7 +405,7 @@ object F_session: TF_session
     Connection = Connection_1
     SQL.Strings = (
       '')
-    Left = 560
+    Left = 504
     Top = 24
   end
   object Connection_1: TFDConnection
@@ -414,7 +414,6 @@ object F_session: TF_session
       'User_Name=root'
       'Server=localhost'
       'DriverID=MySQL')
-    Connected = True
     LoginPrompt = False
     Left = 640
     Top = 24
@@ -779,6 +778,7 @@ object F_session: TF_session
       FieldName = 'ID'
       Origin = 'ID'
       ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
     end
     object T_pedidosID_DIARIA: TIntegerField
       FieldName = 'ID_DIARIA'
